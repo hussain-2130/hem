@@ -4,7 +4,7 @@ cchoice=[("pending","pending"),("closed","closed"),("open","open")]
 class Ticket(models.Model):
  user=models.ForeignKey(User,on_delete=models.CASCADE)
  title=models.CharField(max_length=200)
- description=models.TextField(max_length=200)
+ description=models.TextField(max_length=200)#hhhhhhhhhh
  created_by=models.DateTimeField(auto_now_add=True)
  status=models.CharField(choices=cchoice,default="pending",max_length=20)
 class TicketHistory(models.Model):
